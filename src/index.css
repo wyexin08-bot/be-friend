@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --color-on-primary-fixed: #513844;
+  --color-inverse-surface: #0d0f08;
+  --color-secondary-fixed-dim: #abdfcd;
+  --color-primary-dim: #6c505e;
+  --color-surface-dim: #e2e4d0;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-secondary-fixed: #12473a;
+  --color-surface-tint: #795c6a;
+  --color-tertiary-container: #e1cbfe;
+  --color-error: #ae4025;
+  --color-primary: #795c6a;
+  --color-on-tertiary-fixed: #3e2e57;
+  --color-on-secondary-fixed-variant: #336456;
+  --color-error-container: #fd795a;
+  --color-inverse-primary: #fed8e9;
+  --color-primary-fixed: #fed8e9;
+  --color-on-tertiary-container: #52416b;
+  --color-tertiary: #6e5c88;
+  --color-on-background: #36392b;
+  --color-tertiary-dim: #62507b;
+  --color-outline: #7f8271;
+  --color-on-primary: #ffffff;
+  --color-surface: #fefdf1;
+  --color-on-surface: #36392b;
+  --color-on-surface-variant: #636656;
+  --color-secondary-dim: #2f6152;
+  --color-secondary-container: #b9eedb;
+  --color-on-primary-fixed-variant: #705461;
+  --color-surface-container-highest: #e8ead5;
+  --color-error-dim: #791903;
+  --color-on-secondary-container: #285a4c;
+  --color-outline-variant: #b9bba8;
+  --color-surface-container-low: #fafaeb;
+  --color-tertiary-fixed-dim: #d3bdf0;
+  --color-on-tertiary: #ffffff;
+  --color-surface-variant: #e8ead5;
+  --color-surface-container: #f4f5e4;
+  --color-secondary: #3c6d5e;
+  --color-on-tertiary-fixed-variant: #5c4a75;
+  --color-surface-container-high: #eeefdd;
+  --color-inverse-on-surface: #9d9d93;
+  --color-background: #fefdf1;
+  --color-primary-container: #fed8e9;
+  --color-tertiary-fixed: #e1cbfe;
+  --color-secondary-fixed: #b9eedb;
+  --color-on-secondary: #ffffff;
+  --color-surface-bright: #fefdf1;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #6e1400;
+  --color-primary-fixed-dim: #efcbdb;
+  --color-on-primary-container: #654a57;
+
+  --font-headline: "Space Grotesk", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+  --font-label: "Plus Jakarta Sans", sans-serif;
+}
+
+@layer utilities {
+  .isometric-container {
+    transform: rotateX(50deg) rotateZ(-35deg);
+    transform-style: preserve-3d;
+  }
+  .pixel-border-sm {
+    box-shadow: 4px 0 0 0 var(--color-surface-variant), -4px 0 0 0 var(--color-surface-variant), 0 4px 0 0 var(--color-surface-variant), 0 -4px 0 0 var(--color-surface-variant);
+  }
+  .pixel-border-primary {
+    box-shadow: 4px 0 0 0 var(--color-primary), -4px 0 0 0 var(--color-primary), 0 4px 0 0 var(--color-primary), 0 -4px 0 0 var(--color-primary);
+  }
+  .pixel-border-secondary {
+    box-shadow: 4px 0 0 0 var(--color-secondary), -4px 0 0 0 var(--color-secondary), 0 4px 0 0 var(--color-secondary), 0 -4px 0 0 var(--color-secondary);
+  }
+  .pixel-border-tertiary {
+    box-shadow: 4px 0 0 0 var(--color-tertiary), -4px 0 0 0 var(--color-tertiary), 0 4px 0 0 var(--color-tertiary), 0 -4px 0 0 var(--color-tertiary);
+  }
+  .plot-shadow {
+    box-shadow: 8px 8px 0 0 rgba(54, 57, 43, 0.1);
+  }
+  .active-plot-shadow {
+    box-shadow: 12px 12px 0 0 rgba(121, 92, 106, 0.2);
+  }
+  .glass-effect {
+    backdrop-filter: blur(12px) saturate(120%);
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
